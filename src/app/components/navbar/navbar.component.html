@@ -7,9 +7,9 @@
 
 
         </ul>
-        <form class="form-inline my-2 my-lg-0">
-            <input class="form-control mr-sm-2" type="search" placeholder="Buscar Película" aria-label="Search">
-            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Buscar</button>
-        </form>
+        <div class="form-inline my-2 my-lg-0">
+            <input #txtBuscar (keyup.enter)="buscarPelicula(txtBuscar.value)" class="form-control mr-sm-2" type="search" placeholder="Buscar Película" aria-label="Search">
+            <button (click)="buscarPelicula(txtBuscar.value)" class="btn btn-outline-success my-2 my-sm-0" type="submit">Buscar</button>
+        </div>
     </div>
 </nav>
